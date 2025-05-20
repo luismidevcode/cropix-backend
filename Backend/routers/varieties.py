@@ -1,13 +1,13 @@
 from fastapi import APIRouter
 
-router = APIRouter(prefix="/variedades", 
-                   tags=["Variedades"],
+router = APIRouter(prefix="/varieties", 
+                   tags=["varieties"],
                    responses={404: {"massage": "No encontrado"}})
 
 @router.get("/")
-async def variedades():
+async def varieties():
     return {"Variedades": "Pantalla de Variedades"}
 
 @router.get("/{id}")
-async def variedades(id: int):
+async def varieties(id: int):
     return {"Variedades": "Pantalla de Variedades"}
